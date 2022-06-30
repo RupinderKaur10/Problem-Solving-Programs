@@ -1,0 +1,25 @@
+n = int(input())
+m = int(input())
+k = int(input())
+a = []
+for i in range(0, n):
+    e = int(input())
+    a.append(e)
+print(a)
+count = 1
+t = 0
+for i in range(0, n - m - 1):
+    if a[i] == a[m + i]:
+        t += 1
+        if t == m:
+            t = 0
+            count += 1
+            if count == k:
+                print('Yes')
+    # elif count != k:
+    #     print("no")
+    else:
+        t = 0
+        count = 1
+if count!=k:
+    print("no")
