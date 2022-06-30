@@ -1,0 +1,17 @@
+k = int(input())
+a = []
+n = int(input())
+for i in range(0, n):
+    e = int(input())
+    a.append(e)
+for i in range(0,n):
+    z = i
+    for j in range(i+1,n):
+        if a[z] > a[j]:
+            z = j
+    a[i], a[z] = a[z], a[i]
+print(a)
+for i in range(0,k):
+    print(a[i], end = ' ')
+for i in range(n-1,k-1,-1):
+    print(a[i],end=' ')
