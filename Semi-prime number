@@ -1,0 +1,28 @@
+a = []
+for number in range(2, 201):
+    for j in range(2, number):
+        if number % j == 0:
+            break
+    else:
+        a.append(number)
+
+b = []
+for i in range(len(a) - 1):
+    for j in range(i+1, len(a)-1):
+        mul = a[i]*a[j]
+        b.append(mul)
+
+c = []
+for i in range(len(b) - 1):
+    for j in range(i+1,len(b)-1):
+        add = b[i]+b[j]
+        c.append(add)
+
+
+number = int(input())
+for i in c:
+    if number == i:
+        print("Semi-Prime Number")
+        break
+else:
+    print("not a Semi-Prime Number")
