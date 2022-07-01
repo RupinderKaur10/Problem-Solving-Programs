@@ -1,0 +1,12 @@
+n = int(input())
+count = 0
+for i in range(1,n+1):
+    Reverse = 0
+    m = i * i
+    while i > 0:
+        Reminder = i % 10
+        Reverse = (Reverse * 10) + Reminder
+        i = i // 10
+    if m%Reverse == 0:
+        count+=1
+print(count)
